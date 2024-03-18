@@ -1,7 +1,5 @@
 import streamlit as st
-import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 from unitest import *
 
 
@@ -20,7 +18,7 @@ select_region()
 st.write("")
 st.write("")
 
-st.subheader("지역별 의료인력 그래프 📊")    
+st.subheader("지역별 의료인력 그래프 📊")
 selected_columns = ["인력코드상위", "의사"]
 df_selected = df[selected_columns]
 st.bar_chart(df.set_index('지역')['의사'])
